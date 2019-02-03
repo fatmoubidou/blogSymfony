@@ -1,0 +1,17 @@
+{# templates/article/article_details.html.twig #}
+
+<!-- start header -->
+{{ include('header.html.twig') }}
+<!-- end header -->
+
+  <div class="blog-post">
+        <h2 class="blog-post-title">{{ article.getTitle() }}{{ article.getId() }}</h2>
+        <p class="blog-post-meta">{{ article.getDateCreation()|date('d M Y') }} by <a href="#">{{ article.getIdAuthor() }}</a></p>
+        <p>
+            {{ contents }}
+        </p>
+  </div>
+
+<!-- start footer -->
+  {{ include('footer.html.twig') }}
+<!-- end footer -->
