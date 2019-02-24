@@ -47,11 +47,11 @@ class articleController extends AbstractController
   /**
    *@Route("/article/{id}", name="app_article", requirements={"id"="\d+"})
    */
-  public function single($id = 1){
+  public function single($id = 1, ContentFilter $filtre ){
     $repository = $this->getDoctrine()->getRepository(Article::class);
     // look for a single Product by its primary key (usually "id")
     $article = $repository->find($id);
-    $filtre = new ContentFilter();
+    //$filtre = new ContentFilter();
     $contents = $filtre->getContentFilter($article->getContents());
 
 

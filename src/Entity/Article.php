@@ -21,8 +21,8 @@ class Article
      /**
      * @ORM\Column(type="string", length=150)
      * @Assert\NotBlank
-     * @Assert\Length(min=2)
-     * @Assert\Length(max=150)
+     * @Assert\Length(min=2,
+      *                max=150)
      */
     private $title;
 
@@ -37,17 +37,7 @@ class Article
      */
     private $dateCreation;
 
-    /**
-     * @ORM\Column(type="integer")
-     * @Assert\NotBlank
-     */
-    private $idAuthor;
 
-    /**
-     * @ORM\Column(type="integer")
-     * @Assert\NotBlank
-     */
-    private $idCat;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
@@ -97,30 +87,6 @@ class Article
     public function setDateCreation(\DateTimeInterface $dateCreation): self
     {
         $this->dateCreation = $dateCreation;
-
-        return $this;
-    }
-
-    public function getIdAuthor(): ?int
-    {
-        return $this->idAuthor;
-    }
-
-    public function setIdAuthor(int $idAuthor): self
-    {
-        $this->idAuthor = $idAuthor;
-
-        return $this;
-    }
-
-    public function getIdCat(): ?int
-    {
-        return $this->idCat;
-    }
-
-    public function setIdCat(int $idCat): self
-    {
-        $this->idCat = $idCat;
 
         return $this;
     }
