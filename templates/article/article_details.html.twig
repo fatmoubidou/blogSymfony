@@ -1,17 +1,13 @@
 {# templates/article/article_details.html.twig #}
+{% extends 'base.html.twig' %}
 
-<!-- start header -->
-{{ include('header.html.twig') }}
-<!-- end header -->
 
+{% block body %}
   <div class="blog-post">
-        <h2 class="blog-post-title">{{ article.getTitle() }}{{ article.getId() }}</h2>
-        <p class="blog-post-meta">{{ article.getDateCreation()|date('d M Y') }} by <a href="#">{{ article.getIdAuthor() }}</a></p>
+        <h2 class="blog-post-title">{{ article.title() }}{{ article.id() }}</h2>
+        <p class="blog-post-meta">{{ article.dateCreation()|date('d M Y') }} by <a href="#"></a></p>
         <p>
             {{ contents }}
         </p>
   </div>
-
-<!-- start footer -->
-  {{ include('footer.html.twig') }}
-<!-- end footer -->
+{% endblock %}
