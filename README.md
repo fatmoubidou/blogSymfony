@@ -1,4 +1,5 @@
-1er projet avec  le framework Symfony 4
+Framework Symfony 4
+Découvrir le protocole HTTP, l'architecture Symfony, Twig et réaliser ses premières pages web sous le framework
 Utilisation des fonctionnalités de base par la réalisation d'un mini blog
 
 Compétences acquises :
